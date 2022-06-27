@@ -1,4 +1,3 @@
-# import cv2
 import asyncio
 import threading
 from video_stream import ws_video_client

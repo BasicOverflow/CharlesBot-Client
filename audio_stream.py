@@ -3,10 +3,9 @@ import pickle
 import websockets
  
 FORMAT = pyaudio.paInt16
-CHANNELS = 1 #2
-RATE = 16000 #44100
+CHANNELS = 1 
+RATE = 16000 
 CHUNK = 4096 
-WAVE_OUTPUT_FILENAME = "C:/Users/peter/Desktop/poo2.wav"
 audio = pyaudio.PyAudio()
 
 
@@ -39,7 +38,5 @@ async def ws_audio_client(url):
 
 if __name__ == "__main__":
     import asyncio
-    # asyncio.get_event_loop().run_until_complete(ws_audio_client("ws://localhost:12345"))
-    # asyncio.get_event_loop().run_until_complete(ws_audio_client("ws://10.0.0.253:8004/ws/audio/Laptop"))
     asyncio.get_event_loop().run_until_complete(ws_audio_client("ws://10.0.0.253:8005"))
 
